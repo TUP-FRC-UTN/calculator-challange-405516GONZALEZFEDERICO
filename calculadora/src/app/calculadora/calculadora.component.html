@@ -1,0 +1,18 @@
+<p style="font-family: Arial, Helvetica, sans-serif; margin-left: 5px;">Calculadora</p>
+<div style="border-radius: 10px; border: 5px solid white; background-color: black; height: 380px; width: 400px ">
+    <div style="height: 80px;">
+        <input  (input)="onInputChangeNumberOne($event)"  type="text" style="border-radius: 10px; border: 1px solid white; width: 380px; height: 50px; margin-top: 5px; margin-left: 5px;" placeholder="Ingrese el primer valor">
+    </div>
+    <div style="height: 80px;">
+        <input (input)="onInputChangeNumberTwo($event)" type="text" style="border-radius: 10px; border: 1px solid white; width: 380px; height: 50px; margin-top: 5px; margin-left: 5px;" placeholder="Ingrese el segundo valor">
+    </div>
+    <div style="height: 100px;">
+        <input type="text" [value]="resultado" style="border-radius: 10px; border: 1px solid white; width: 380px; height: 50px; margin-top: 5px; margin-left: 5px; color: white;" placeholder="Resultado" disabled>
+    </div>
+    <div>
+        <app-botones [valorUno]="valorU" [valorDos]="valorD" (resultadoChange)="updateResultado($event)"></app-botones>
+    </div>
+</div>
+
+
+
